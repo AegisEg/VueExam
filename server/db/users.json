@@ -1,19 +1,11 @@
 [
   {
     "id": 1,
-    "first_name": "AimilA",
+    "first_name": "Aimil",
     "last_name": "Clewley",
     "email": "aclewley0@behance.net",
     "gender": "Female",
-    "ip_address": "240.117.87.128"
-  },
-  {
-    "id": 2,
-    "first_name": "Inesita",
-    "last_name": "Cohr",
-    "email": "icohr1@about.me",
-    "gender": "Female",
-    "ip_address": "137.126.242.234"
+    "ip_address": "240.117.87.127"
   },
   {
     "id": 3,

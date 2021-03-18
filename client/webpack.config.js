@@ -1,7 +1,6 @@
 var path = require("path");
 var webpack = require("webpack");
 require("babel-polyfill");
-const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
 module.exports = {
   entry: ["babel-polyfill", "./src/index.js"],
@@ -38,7 +37,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [new UglifyJSPlugin(), new VueLoaderPlugin()],
+  plugins: [new VueLoaderPlugin()],
   resolve: {
     alias: {
       vue$: "vue/dist/vue.esm.js",
@@ -63,12 +62,6 @@ if (process.env.NODE_ENV === "production") {
     new webpack.DefinePlugin({
       "process.env": {
         NODE_ENV: '"production"',
-      },
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false,
       },
     }),
     new webpack.LoaderOptionsPlugin({
